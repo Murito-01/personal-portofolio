@@ -1,45 +1,70 @@
-import type { NavLink } from "@/types";
+"use client";
 
-export type NavbarProps = {
-  brand?: string;
-  links?: NavLink[];
-};
+import { useState } from "react";
 
-const defaultLinks: NavLink[] = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Contact", href: "#contact" },
-];
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
-export default function Navbar({
-  brand = "Your Name",
-  links = defaultLinks,
-}: NavbarProps) {
+  const navItems = [
+    { name: "About", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Projects", id: "projects" },
+    { name: "Contact", id: "contact" },
+  ];
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur dark:bg-black/60 dark:border-white/10">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-3">
-        <a
-          href="#top"
-          className="text-sm font-semibold tracking-wide text-zinc-900 dark:text-zinc-50"
-        >
-          {brand}
-        </a>
+    <nav className="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        {/* Logo */}
+        <h1 className="text-xl font-bold cursor-pointer">
+          INTRODUCTION
+        </h1>
 
-        <nav className="flex items-center gap-4">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-zinc-50"
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-gray-600 hover:text-black transition"
             >
-              {l.label}
-            </a>
+              {item.name}
+            </button>
           ))}
-        </nav>
+        </div>
+
+        {/* Mobile Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
       </div>
-    </header>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white px-6 pb-4 flex flex-col gap-4">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-left text-gray-600 hover:text-black"
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 }
-

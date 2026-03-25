@@ -1,26 +1,14 @@
-import type { Certificate } from "@/types";
-
-export const certificates: Certificate[] = [
-  {
-    id: "cert-1",
-    name: "Front-End Web Developer",
-    issuer: "Example Academy",
-    credentialUrl: "https://example.com",
-    year: "2026",
-  },
-  {
-    id: "cert-2",
-    name: "TypeScript Fundamentals",
-    issuer: "Example Training",
-    credentialUrl: "https://example.com",
-    year: "2025",
-  },
-  {
-    id: "cert-3",
-    name: "Next.js Application Patterns",
-    issuer: "Example Learning",
-    credentialUrl: "https://example.com",
-    year: "2024",
-  },
+export const certificates = [
+    {
+      title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+      issuer: "Dicoding Indonesia",
+      year: "2023",
+      link: "#",
+    },
+    {
+      title: "Pengenalan ke logika Pemrograman (Programming Logic 101)",
+      issuer: "Dicoding Indonesia",
+      year: "2023",
+      link: "#",
+    },
 ];
-
