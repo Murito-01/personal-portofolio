@@ -1,8 +1,8 @@
 export default function Skills() {
     return (
-      <section id="skills" className="py-24 px-6">
+      <section id="skills" className="py-24 px-6 border-b">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Skills</h2>
+          <h2 className="text-3xl font-bold mb-12 tracking-tight">Skills</h2>
         </div>
       </section>
     );
