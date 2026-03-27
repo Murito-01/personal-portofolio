@@ -1,11 +1,9 @@
 export default function Footer() {
-    return (
-      <footer className="py-6 px-6 border-t mt-10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          
-          <p>© {new Date().getFullYear()} Muhammad Risto Abrar</p>
-  
-        </div>
-      </footer>
-    );
-  }
+  return (
+    <footer className="px-6 py-8 border-t">
+      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-4 text-sm text-gray-500">
+        <p>© {new Date().getFullYear()} Muhammad Risto Abrar</p>
+      </div>
+    </footer>
+  );
+}
