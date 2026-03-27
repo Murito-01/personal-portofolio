@@ -23,8 +23,8 @@ export default function Skills() {
                   key={i}
                   className="inline-flex items-center text-sm px-3 py-1 bg-gray-200 rounded-full whitespace-nowrap"
                   style={{
-                    backgroundColor: "#e5e7eb", // gray-200
-                    padding: "0.25rem 0.75rem", // py-1 px-3
+                    backgroundColor: "#e5e7eb",
+                    padding: "0.25rem 0.75rem",
                     borderRadius: "9999px",
                     whiteSpace: "nowrap",
                   }}
