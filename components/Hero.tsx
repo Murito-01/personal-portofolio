@@ -9,7 +9,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-xl text-gray-600">
-          Web Developer
+          Full-Stack Developer
         </h2>
 
         <p className="text-gray-600 leading-relaxed mb-8 max-w-xl">

@@ -5,7 +5,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <h1 className="font-semibold">
-          Muhammad Risto Abrar
+          Risto.dev
         </h1>
 
         {/* Menu */}
