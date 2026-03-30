@@ -19,12 +19,15 @@ type ButtonAsLinkProps = BaseButtonProps &
 type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const baseClasses =
-  "inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-medium transition duration-300";
+  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition duration-200";
 
 const variantClasses = {
-  primary: "bg-black text-white hover:bg-gray-800",
-  secondary: "border border-gray-300 text-gray-800 hover:bg-gray-100",
-  ghost: "text-blue-600 hover:text-blue-700",
+  primary:
+    "bg-cyan-600 text-white shadow-sm shadow-cyan-600/20 hover:bg-cyan-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-600 dark:bg-cyan-500 dark:shadow-cyan-500/25 dark:hover:bg-cyan-400 dark:focus-visible:outline-cyan-400",
+  secondary:
+    "border border-zinc-300/90 bg-white text-zinc-900 shadow-sm shadow-zinc-950/5 hover:border-zinc-400 hover:bg-zinc-50 dark:border-zinc-600 dark:bg-zinc-900 dark:text-zinc-100 dark:shadow-none dark:hover:border-zinc-500 dark:hover:bg-zinc-800",
+  ghost:
+    "text-cyan-700 hover:text-cyan-600 dark:text-cyan-400 dark:hover:text-cyan-300",
 };
 
 export default function Button({
@@ -43,8 +46,9 @@ export default function Button({
     );
   }
 
+  const { type, ...buttonProps } = props as ButtonAsButtonProps;
   return (
-    <button {...props} className={classes}>
+    <button type={type ?? "button"} {...buttonProps} className={classes}>
       {children}
     </button>
   );
