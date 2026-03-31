@@ -1,11 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html {
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-ibm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-ibm-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
-  
-  section {
-    scroll-margin-top: 80px;
+
+  section[id] {
+    scroll-margin-top: 5rem;
   }
+}
