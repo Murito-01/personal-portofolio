@@ -7,11 +7,11 @@ import { skillGroups } from "@/data/skills";
 export default function Skills() {
   return (
     <Section id="skills">
-      <SectionTitle>Skills</SectionTitle>
-      <div className="grid md:grid-cols-2 gap-6">
+      <SectionTitle eyebrow="Toolbox">Skills</SectionTitle>
+      <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
         {skillGroups.map((group) => (
           <Card key={group.title}>
-            <h3 className="text-xl text-gray-700 mb-4">{group.title}</h3>
+            <h3 className="mb-4 text-sm font-semibold text-zinc-900 dark:text-zinc-100">{group.title}</h3>
             <div className="flex flex-wrap gap-2">
               {group.items.map((skill) => (
                 <Badge key={skill}>{skill}</Badge>

@@ -5,10 +5,13 @@ import { profile } from "@/data/profile";
 export default function About() {
   return (
     <Section id="about">
-      <SectionTitle>About Me</SectionTitle>
-      <div className="grid md:grid-cols-2 gap-10">
-        {profile.about.map((paragraph) => (
-          <p key={paragraph} className="text-gray-600 leading-relaxed">
+      <SectionTitle eyebrow="Background">About</SectionTitle>
+      <div className="grid gap-10 md:grid-cols-2 md:gap-12">
+        {profile.about.map((paragraph, index) => (
+          <p
+            key={index}
+            className="text-base leading-relaxed text-zinc-600 dark:text-zinc-400"
+          >
             {paragraph}
           </p>
         ))}
