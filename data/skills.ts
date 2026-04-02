@@ -9,7 +9,7 @@ export const skillGroups = [
   },
   {
     title: "Tools & Technologies",
-    items: ["PostgreSQL", "Git", "OpenZeppelin", "IPFS"],
+    items: ["PostgreSQL", "Git", "OpenZeppelin", "IPFS", "AI", "OpenClaw"],
   },
   {
     title: "Soft Skills",
