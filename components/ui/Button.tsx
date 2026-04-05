@@ -19,7 +19,7 @@ type ButtonAsLinkProps = BaseButtonProps &
 type ButtonProps = ButtonAsButtonProps | ButtonAsLinkProps;
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition duration-200";
+  "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition duration-200 [&_svg]:shrink-0";
 
 const variantClasses = {
   primary:

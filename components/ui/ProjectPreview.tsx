@@ -1,5 +1,10 @@
 import type { ProjectGradient } from "@/data/projects";
 
+/**
+ * Fallback preview when a project has no `gallery` images: gradient + initials.
+ * Projects with screenshots use `ProjectGallery` instead (see Projects section).
+ */
+
 const gradientClasses: Record<ProjectGradient, string> = {
   chain:
     "from-cyan-600/35 via-teal-600/25 to-zinc-900/10 dark:from-cyan-500/30 dark:via-teal-500/20 dark:to-zinc-950/40",
