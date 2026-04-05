@@ -9,6 +9,7 @@ export type ProjectEntry = {
   github: string;
   demo: string;
   gradient?: ProjectGradient;
+  gallery?: string[];
 };
 
 export const projects: ProjectEntry[] = [
@@ -23,5 +24,6 @@ export const projects: ProjectEntry[] = [
     github: "https://github.com/Murito-01/DApp-Skillchain",
     demo: "",
     gradient: "chain",
+    gallery: ["/project1/1A.png", "/project1/1B.png", "/project1/1C.png"],
   },
 ];
