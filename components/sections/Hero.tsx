@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { profile } from "@/data/profile";
 import Button from "@/components/ui/Button";
+
+const PROFILE_PHOTO = "/Foto1.jpeg";
 
 export default function Hero() {
   return (
@@ -10,6 +13,18 @@ export default function Hero() {
       />
       <div className="relative mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
+          <div className="mb-6 flex justify-center">
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-white shadow-lg shadow-zinc-950/15 ring-2 ring-cyan-500/40 ring-offset-2 ring-offset-zinc-50 dark:border-zinc-800 dark:shadow-black/40 dark:ring-cyan-400/35 dark:ring-offset-zinc-950 sm:h-32 sm:w-32 md:h-36 md:w-36">
+              <Image
+                src={PROFILE_PHOTO}
+                alt={profile.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 112px, 144px"
+                priority
+              />
+            </div>
+          </div>
           <p className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
             Portfolio
           </p>

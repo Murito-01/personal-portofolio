@@ -16,8 +16,6 @@ export const profile = {
       "Open for collaboration on web and blockchain-focused products. Reach out for full-time roles, freelance work, or technical discussions.",
     email: "mailto:ristoo.abrar@gmail.com",
     github: "https://github.com/Murito-01",
-    whatsapp: "https://wa.me/6285900375644",
-    telegram: "https://t.me/@murito01",
     linkedin: "https://www.linkedin.com/in/muhammad-risto-abrar-649536210/",
   },
 };
