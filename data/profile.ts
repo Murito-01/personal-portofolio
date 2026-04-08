@@ -1,6 +1,7 @@
 export const profile = {
   name: "Muhammad Risto Abrar",
   role: "Full-Stack Developer",
+  tagline: "Deep in vibe-coding ⚡",
   intro:
     "I build scalable, user-focused web applications with modern technologies — including decentralized systems where trust and verification matter.",
   focusArea:

@@ -5,11 +5,13 @@ import SectionTitle from "@/components/ui/SectionTitle";
 import { certificates } from "@/data/certificates";
 
 export default function Certificates() {
+  const highlighted = certificates.slice(0, 4);
+
   return (
     <Section id="certificates">
       <SectionTitle eyebrow="Credentials">Certificates</SectionTitle>
-      <div className="grid gap-5 sm:grid-cols-2 sm:gap-6">
-        {certificates.map((cert) => {
+      <div id="certificates-list" className="grid gap-5 sm:grid-cols-2 sm:gap-6">
+        {highlighted.map((cert) => {
           const external = cert.link.startsWith("http");
           return (
             <Card key={`${cert.title}-${cert.year}`}>
@@ -31,6 +33,13 @@ export default function Certificates() {
           );
         })}
       </div>
+      {certificates.length > 4 && (
+        <div className="mt-8 flex justify-center">
+          <Button href="/certificates" variant="secondary">
+            View All
+          </Button>
+        </div>
+      )}
     </Section>
   );
 }

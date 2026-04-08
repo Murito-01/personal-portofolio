@@ -28,11 +28,20 @@ export default function Hero() {
           <p className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
             Portfolio
           </p>
-          <p className="mb-2 text-sm text-zinc-500 dark:text-zinc-400">Hi, I&apos;m</p>
+          <p className="mb-2 text-sm text-zinc-500 dark:text-zinc-400">
+            Hi, I&apos;m
+          </p>
           <h1 className="mb-4 text-4xl font-semibold tracking-tight text-balance text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50">
             {profile.name}
           </h1>
-          <p className="mb-6 text-lg text-zinc-700 dark:text-zinc-300">{profile.role}</p>
+          <div className="mb-6">
+            <p className="text-lg text-zinc-700 dark:text-zinc-300">
+              {profile.role}
+            </p>
+            <p className="mt-1 text-sm font-medium text-cyan-600 dark:text-cyan-400">
+              {profile.tagline}
+            </p>
+          </div>
           <p className="mb-10 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
             {profile.intro}
           </p>
@@ -48,7 +57,9 @@ export default function Hero() {
           <p className="mb-2 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
             Focus
           </p>
-          <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">{profile.focusArea}</p>
+          <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
+            {profile.focusArea}
+          </p>
         </div>
       </div>
     </section>
