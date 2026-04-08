@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio - Muhammad Risto Abrar
+
+Portfolio website built with Next.js App Router and Tailwind CSS.
+
+The site highlights professional profile, skills, selected projects, certificates, and contact links in a minimal dark/light UI.
+
+## Features
+
+- Minimalist, modern, and responsive layout
+- Light/Dark mode toggle
+- Hero section with profile image
+- Project showcase with image carousel
+- Certificates highlight on homepage (4 items) + dedicated `/certificates` page
+- Contact section with social links
+- Reusable UI components (`Button`, `Card`, `Badge`, `Section`, etc.)
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+
+## Project Structure
+
+```bash
+app/
+  page.tsx
+  certificates/page.tsx
+  layout.tsx
+  globals.css
+
+components/
+  Navbar.tsx
+  Footer.tsx
+  sections/
+    Hero.tsx
+    About.tsx
+    Skills.tsx
+    Projects.tsx
+    Certificates.tsx
+    Contact.tsx
+  ui/
+    Badge.tsx
+    Button.tsx
+    Card.tsx
+    ProjectGallery.tsx
+    ProjectPreview.tsx
+    Section.tsx
+    SectionTitle.tsx
+    ThemeToggle.tsx
+
+data/
+  profile.ts
+  projects.ts
+  certificates.ts
+  skills.ts
+  navigation.ts
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1) Install dependencies
+
+```bash
+npm install
+```
+
+### 2) Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev      # Start local development server
+npm run lint     # Run ESLint
+npm run build    # Create production build
+npm run start    # Run production server
+```
 
-## Learn More
+## Content Customization
 
-To learn more about Next.js, take a look at the following resources:
+Edit these files to update content quickly:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `data/profile.ts` -> name, role, intro, focus area, contact links
+- `data/projects.ts` -> project list, tech stack, repo/demo links, gallery image paths
+- `data/certificates.ts` -> full certificate list
+- `data/skills.ts` -> grouped skills
+- `data/navigation.ts` -> navbar links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Project gallery images
 
-## Deploy on Vercel
+Put screenshots in `public/project1/` (or other folders under `public/`) and reference them in `data/projects.ts`, for example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```ts
+gallery: ["/project1/1A.png", "/project1/1B.png", "/project1/1C.png"];
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Profile image
+
+Profile photo is loaded from:
+
+```bash
+public/Foto1.jpeg
+```
+
+You can replace it with another image and keep the same filename, or update the path in `components/sections/Hero.tsx`.
+
+## Deployment
+
+This project is ready to deploy on [Vercel](https://vercel.com/).
+
+### Build check before deploy
+
+```bash
+npm run lint && npm run build
+```
+
+If both commands pass, deploy should work normally.
+
+## License
+
+This project is for personal portfolio use.
