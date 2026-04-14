@@ -11,11 +11,13 @@ import { useCallback, useState } from "react";
 type ProjectGalleryProps = {
   images: string[];
   title: string;
+  layout?: "landscape" | "portrait";
 };
 
-export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
+export default function ProjectGallery({ images, title, layout = "landscape" }: ProjectGalleryProps) {
   const [index, setIndex] = useState(0);
   const count = images.length;
+  const isPortrait = layout === "portrait";
 
   const goPrev = useCallback(() => {
     setIndex((i) => (i - 1 + count) % count);
@@ -29,7 +31,9 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
 
   return (
     <div
-      className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-zinc-200/80 bg-zinc-100 dark:border-zinc-700/80 dark:bg-zinc-900"
+      className={`relative w-full overflow-hidden rounded-xl border border-zinc-200/80 bg-zinc-100 dark:border-zinc-700/80 dark:bg-zinc-900 ${
+        isPortrait ? "h-[420px] sm:h-[500px]" : "aspect-[4/3]"
+      }`}
       role="region"
       aria-roledescription="carousel"
       aria-label={`${title} preview gallery`}
@@ -53,8 +57,8 @@ export default function ProjectGallery({ images, title }: ProjectGalleryProps) {
                 src={src}
                 alt={`${title} screenshot ${i + 1} of ${count}`}
                 fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className={isPortrait ? "object-contain p-2" : "object-cover object-top"}
+                sizes={isPortrait ? "(max-width: 768px) 100vw, 60vw" : "(max-width: 768px) 100vw, 50vw"}
                 priority={i === 0}
               />
             </div>

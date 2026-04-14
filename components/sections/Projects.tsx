@@ -11,52 +11,50 @@ export default function Projects() {
   return (
     <Section id="projects">
       <SectionTitle eyebrow="Selected work">Projects</SectionTitle>
-      <div className="flex flex-col gap-6">
+      <div className="grid gap-6 xl:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="overflow-hidden p-0">
-            <div className="grid items-stretch gap-0 md:grid-cols-2">
-              <div className="border-b border-zinc-200/80 p-5 md:border-b-0 md:border-r md:p-6 dark:border-zinc-800/80">
+          <Card key={project.title} className="h-full overflow-hidden p-0">
+            <div className="flex h-full flex-col">
+              <div className="border-b border-zinc-200/80 p-4 sm:p-5 dark:border-zinc-800/80">
                 {project.gallery && project.gallery.length > 0 ? (
-                  <ProjectGallery images={project.gallery} title={project.title} />
+                  <ProjectGallery images={project.gallery} title={project.title} layout={project.galleryLayout} />
                 ) : (
                   <ProjectPreview title={project.title} gradient={project.gradient} />
                 )}
               </div>
-              <div className="flex flex-col p-5 md:p-6">
-                <h3 className="mb-2 text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
-                  {project.title}
-                </h3>
-                <p className="mb-6 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{project.description}</p>
 
-                <dl className="mb-6 space-y-3 text-sm">
-                  <div>
-                    <dt className="mb-0.5 font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
-                      Problem
-                    </dt>
-                    <dd className="text-zinc-700 dark:text-zinc-300">{project.problem}</dd>
-                  </div>
-                  <div>
-                    <dt className="mb-0.5 font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
-                      Solution
-                    </dt>
-                    <dd className="text-zinc-700 dark:text-zinc-300">{project.solution}</dd>
-                  </div>
-                </dl>
+              <div className="flex h-full flex-col p-5 md:p-6">
+                <h3 className="mb-2 text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">{project.title}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{project.description}</p>
 
-                <div className="mb-6 flex flex-wrap gap-2">
+                <div className="mb-5 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <Badge key={tech}>{tech}</Badge>
                   ))}
                 </div>
 
-                <div className="mt-auto flex flex-wrap gap-3 border-t border-zinc-100 pt-5 dark:border-zinc-800/80">
-                  <Button
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="ghost"
-                    className="gap-2 px-0 py-2"
-                  >
+                <details className="mb-5 rounded-lg border border-zinc-200/80 bg-zinc-50/60 p-3 dark:border-zinc-800/80 dark:bg-zinc-900/60">
+                  <summary className="cursor-pointer list-none text-xs font-medium uppercase tracking-wider text-zinc-500">
+                    Case study details
+                  </summary>
+                  <dl className="mt-3 space-y-3 text-sm">
+                    <div>
+                      <dt className="mb-0.5 font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+                        Problem
+                      </dt>
+                      <dd className="text-zinc-700 dark:text-zinc-300">{project.problem}</dd>
+                    </div>
+                    <div>
+                      <dt className="mb-0.5 font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+                        Solution
+                      </dt>
+                      <dd className="text-zinc-700 dark:text-zinc-300">{project.solution}</dd>
+                    </div>
+                  </dl>
+                </details>
+
+                <div className="mt-auto flex flex-wrap gap-3 border-t border-zinc-100 pt-4 dark:border-zinc-800/80">
+                  <Button href={project.github} target="_blank" rel="noopener noreferrer" variant="ghost" className="gap-2 px-0 py-2">
                     <GithubMark className="h-4 w-4 text-current" />
                     GitHub
                   </Button>
