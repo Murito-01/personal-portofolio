@@ -1,11 +1,11 @@
 export const skillGroups = [
   {
     title: "Languages",
-    items: ["JavaScript", "Solidity", "Java", "Kotlin", "HTML", "CSS", "React"],
+    items: ["JavaScript", "Solidity", "Java", "Kotlin", "Dart", "HTML", "CSS", "React"],
   },
   {
     title: "Frameworks & Libraries",
-    items: ["React.js", "Next.js", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Flutter", "Tailwind CSS"],
   },
   {
     title: "Tools & Technologies",
