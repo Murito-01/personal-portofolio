@@ -1,15 +1,15 @@
 export const skillGroups = [
   {
     title: "Languages",
-    items: ["JavaScript", "Solidity", "Java", "Kotlin", "Dart", "HTML", "CSS", "React"],
+    items: ["JavaScript", "Solidity", "Java", "Kotlin", "Dart", "PHP", "HTML", "CSS", "React"],
   },
   {
     title: "Frameworks & Libraries",
-    items: ["React.js", "Next.js", "Flutter", "Tailwind CSS"],
+    items: ["React.js", "Next.js", "Flutter", "Laravel", "Blade", "Tailwind CSS"],
   },
   {
     title: "Tools & Technologies",
-    items: ["PostgreSQL", "Git", "OpenZeppelin", "IPFS", "AI", "OpenClaw"],
+    items: ["PostgreSQL", "Git", "OpenZeppelin", "Vite", "IPFS", "AI", "OpenClaw"],
   },
   {
     title: "Soft Skills",

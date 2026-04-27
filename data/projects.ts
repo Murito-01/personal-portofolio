@@ -36,10 +36,24 @@ export const projects: ProjectEntry[] = [
     solution:
       "Growbit introduces a gamified system with XP, leveling, daily reset, and anti-cheat logic to create a more engaging and consistent habit-building experience.",
     tech: ["Flutter", "Dart", "Android Emulator"],
-    github: "https://github.com/Murito-01",
+    github: "https://github.com/Murito-01/growbit",
     demo: "",
     gradient: "mesh",
     gallery: ["/project2/2A.jpeg", "/project2/2B.jpeg", "/project2/2C.jpeg"],
     galleryLayout: "portrait",
+  },
+  {
+    title: "Freelora",
+    description:
+      "Freelora is a web-based freelance management system that helps users manage clients, projects, tasks, and invoices in one integrated platform.",
+    problem: "Freelancers often struggle to organize their work, track project progress, and manage billing efficiently using scattered tools.",
+    solution:
+      "This system provides a centralized platform to manage clients, track tasks with deadlines, generate invoices, export them as PDF, and send them via email.",
+    tech: ["Laravel", "Blade", "Tailwind CSS"],
+    github: "https://github.com/Murito-01/freelora",
+    demo: "",
+    gradient: "mesh",
+    gallery: ["/project3/3A.png", "/project3/3B.png", "/project3/3C.png"],
+    galleryLayout: "landscape",
   },
 ];
