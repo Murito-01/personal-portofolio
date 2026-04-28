@@ -13,7 +13,8 @@ export default function Hero() {
       />
       <div className="relative mx-auto max-w-5xl">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-6 flex justify-center">
+          {/* Profile photo — scales in */}
+          <div className="mb-6 flex justify-center animate-scale-in">
             <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border-4 border-white shadow-lg shadow-zinc-950/15 ring-2 ring-cyan-500/40 ring-offset-2 ring-offset-zinc-50 dark:border-zinc-800 dark:shadow-black/40 dark:ring-cyan-400/35 dark:ring-offset-zinc-950 sm:h-32 sm:w-32 md:h-36 md:w-36">
               <Image
                 src={PROFILE_PHOTO}
@@ -25,16 +26,24 @@ export default function Hero() {
               />
             </div>
           </div>
-          <p className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
+
+          {/* Eyebrow */}
+          <p className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400 animate-fade-in-up animation-delay-100">
             Portfolio
           </p>
-          <p className="mb-2 text-sm text-zinc-500 dark:text-zinc-400">
+
+          {/* Hi greeting */}
+          <p className="mb-2 text-sm text-zinc-500 dark:text-zinc-400 animate-fade-in-up animation-delay-200">
             Hi, I&apos;m
           </p>
-          <h1 className="mb-4 text-4xl font-semibold tracking-tight text-balance text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50">
+
+          {/* Name */}
+          <h1 className="mb-4 text-4xl font-semibold tracking-tight text-balance text-zinc-900 sm:text-5xl md:text-6xl dark:text-zinc-50 animate-fade-in-up animation-delay-200">
             {profile.name}
           </h1>
-          <div className="mb-6">
+
+          {/* Role + tagline */}
+          <div className="mb-6 animate-fade-in-up animation-delay-300">
             <p className="text-lg text-zinc-700 dark:text-zinc-300">
               {profile.role}
             </p>
@@ -42,10 +51,14 @@ export default function Hero() {
               {profile.tagline}
             </p>
           </div>
-          <p className="mb-10 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+
+          {/* Bio */}
+          <p className="mb-10 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 animate-fade-in-up animation-delay-400">
             {profile.intro}
           </p>
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
+
+          {/* CTA Buttons */}
+          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-500">
             <Button href="#projects">View projects</Button>
             <Button href="#contact" variant="secondary">
               Contact
@@ -53,7 +66,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-2xl rounded-2xl border border-zinc-200/80 bg-white/80 p-6 text-left shadow-sm shadow-zinc-950/[0.04] backdrop-blur-sm transition duration-200 hover:-translate-y-0.5 hover:border-zinc-300/90 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-none dark:hover:border-zinc-700 sm:p-8">
+        {/* Focus card */}
+        <div className="mx-auto max-w-2xl rounded-2xl border border-zinc-200/80 bg-white/80 p-6 text-left shadow-sm shadow-zinc-950/[0.04] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200/60 hover:shadow-lg hover:shadow-cyan-500/5 dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-none dark:hover:border-cyan-800/40 dark:hover:shadow-cyan-500/5 sm:p-8 animate-fade-in-up animation-delay-600">
           <p className="mb-2 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
             Focus
           </p>
