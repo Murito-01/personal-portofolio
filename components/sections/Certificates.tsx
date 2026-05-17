@@ -26,11 +26,8 @@ export default function Certificates() {
           return (
             <article
               key={`${cert.title}-${cert.year}`}
-              className={`group relative rounded-2xl border border-zinc-200/80 bg-white/90 p-6 shadow-sm shadow-zinc-950/[0.04] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-zinc-300/80 hover:shadow-lg hover:shadow-zinc-950/[0.08] dark:border-zinc-800 dark:bg-zinc-900/50 dark:shadow-none dark:hover:border-zinc-700/80 dark:hover:shadow-xl dark:hover:shadow-black/30 ${isNew ? "animate-fade-in-up" : ""}`}
+              className={`rounded-xl border border-zinc-200/80 bg-white/70 p-5 transition-colors duration-200 hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-900/35 dark:hover:border-zinc-700 ${isNew ? "animate-fade-in-up" : ""}`}
             >
-              {/* Left border accent */}
-              <span className="absolute left-0 top-4 bottom-4 w-0.5 rounded-r-full bg-gradient-to-b from-cyan-500 to-cyan-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
               <h3 className="mb-2 text-base font-semibold leading-snug text-zinc-900 dark:text-zinc-50">
                 {cert.title}
               </h3>
@@ -44,10 +41,10 @@ export default function Certificates() {
                 {...(external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="gap-1.5"
+                className="gap-1.5 px-0 py-1.5"
               >
                 View certificate
-                <ArrowIcon className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                <ArrowIcon className="h-3.5 w-3.5" />
               </Button>
             </article>
           );
