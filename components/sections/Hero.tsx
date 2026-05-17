@@ -52,13 +52,23 @@ export default function Hero() {
             </p>
           </div>
 
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-2 animate-fade-in-up animation-delay-400">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 dark:border-emerald-900/80 dark:bg-emerald-950/40 dark:text-emerald-300">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" aria-hidden />
+              {profile.availability}
+            </span>
+            <span className="inline-flex items-center rounded-full border border-zinc-200/80 bg-white/80 px-3 py-1.5 text-xs font-medium text-zinc-600 dark:border-zinc-800 dark:bg-zinc-900/60 dark:text-zinc-400">
+              {profile.location}
+            </span>
+          </div>
+
           {/* Bio */}
-          <p className="mb-10 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 animate-fade-in-up animation-delay-400">
+          <p className="mb-10 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 animate-fade-in-up animation-delay-500">
             {profile.intro}
           </p>
 
           {/* CTA Buttons */}
-          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-500">
+          <div className="mb-10 flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-600">
             <Button href="#projects">View projects</Button>
             <Button href="#contact" variant="secondary">
               Contact
@@ -67,7 +77,7 @@ export default function Hero() {
         </div>
 
         {/* Focus card */}
-        <div className="mx-auto max-w-2xl rounded-2xl border border-zinc-200/80 bg-white/80 p-6 text-left shadow-sm shadow-zinc-950/[0.04] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200/60 hover:shadow-lg hover:shadow-cyan-500/5 dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-none dark:hover:border-cyan-800/40 dark:hover:shadow-cyan-500/5 sm:p-8 animate-fade-in-up animation-delay-600">
+        <div className="mx-auto max-w-2xl rounded-2xl border border-zinc-200/80 bg-white/80 p-6 text-left shadow-sm shadow-zinc-950/[0.04] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200/60 hover:shadow-lg hover:shadow-cyan-500/5 dark:border-zinc-800 dark:bg-zinc-900/60 dark:shadow-none dark:hover:border-cyan-800/40 dark:hover:shadow-cyan-500/5 sm:p-8 animate-fade-in-up animation-delay-700">
           <p className="mb-2 font-mono text-xs font-medium uppercase tracking-widest text-cyan-700 dark:text-cyan-400">
             Focus
           </p>

@@ -125,7 +125,9 @@ export default async function GitHubContributions() {
             <p className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
               {contributions ? contributions.total.toLocaleString("en-US") : "--"} contributions
             </p>
-            <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">in the last year</p>
+            <p className="mt-1 max-w-xl text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+              Building consistently across web, mobile, and blockchain projects in the last year.
+            </p>
           </div>
           <a
             href={profile.contact.github}
