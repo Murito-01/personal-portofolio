@@ -111,6 +111,15 @@ function ProjectDetail({ project }: ProjectDetailProps) {
           {project.description}
         </p>
 
+        <div className="mb-5 rounded-lg border border-cyan-200/70 bg-cyan-50/70 p-4 dark:border-cyan-900/60 dark:bg-cyan-950/20">
+          <p className="mb-1 font-mono text-[11px] font-medium uppercase tracking-wider text-cyan-700 dark:text-cyan-400">
+            Outcome
+          </p>
+          <p className="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+            {project.outcome}
+          </p>
+        </div>
+
         {/* Tech badges */}
         <div className="mb-5 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
@@ -135,6 +144,12 @@ function ProjectDetail({ project }: ProjectDetailProps) {
                 Solution
               </dt>
               <dd className="text-zinc-700 dark:text-zinc-300">{project.solution}</dd>
+            </div>
+            <div>
+              <dt className="mb-0.5 font-mono text-[11px] font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-500">
+                Outcome
+              </dt>
+              <dd className="text-zinc-700 dark:text-zinc-300">{project.outcome}</dd>
             </div>
           </dl>
         </details>
